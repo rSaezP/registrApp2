@@ -1,0 +1,1 @@
+import { Usuario } from "./bd.models"; // Importar la interface de usuario

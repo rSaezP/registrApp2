@@ -1,0 +1,24 @@
+<ion-content>
+
+
+  <!-- @if (isLoading) {
+    <ion-spinner name="bubbles"></ion-spinner>
+  } -->
+  <!-- Contenido del Login -->
+  <p>login works!</p>
+  <ion-item>
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input [(ngModel)]="usuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Clave</ion-label>
+    <ion-input [(ngModel)]="clave"></ion-input>
+  </ion-item>
+  <ion-button (click)="login(usuario, clave)">Iniciar sesión</ion-button>
+  <!-- Mostrar mensaje de error si el login falla -->
+  <ion-text color="danger" *ngIf="loginFailed">
+    Usuario o clave incorrectos.
+  </ion-text>
+
+
+</ion-content>
