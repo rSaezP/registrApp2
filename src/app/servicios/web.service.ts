@@ -5,10 +5,11 @@ import { inject, Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WebService {
+  private apiUrl = 'https://66f96cccafc569e13a98bf3f.mockapi.io/api/v2/';
 
-  httpClient = inject(HttpClient);  // Inyectar HttpClient para hacer peticiones HTTP.  // Inyectar
+   // Inyectar HttpClient para hacer peticiones HTTP.  // Inyectar
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   request(type: 'POST' | 'GET', url: string, path: string, body: any = {}){ // Crear una promesa para realizar la petición HTTP.  // Crear una pro
     return new Promise((resolve) => {
@@ -31,6 +32,9 @@ export class WebService {
         });
       }
     });
+  }
+  getAsignaturaDetalles(nombreAsig: string) {
+    return this.httpClient.get<any[]>(`${this.apiUrl}/asignaturas?nombreAsig=${nombreAsig}`);
   }
 
 }

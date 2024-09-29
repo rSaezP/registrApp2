@@ -1,3 +1,47 @@
-<p>
-  asig-alumno works!
-</p>
+<ion-header>
+  <div class="toolbar-container">
+    <ion-toolbar>
+      <ion-title>{{ asignatura }}</ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="detalle-asignatura">
+    <br>
+    <h2>Detalles de la asignatura:<br><br> <u>{{ asignatura }}</u>
+      <h4>Sala: {{ sala }}</h4>
+    </h2>
+    <div class="imagen-asignatura">
+      <img src="assets/img/escritorios.png" alt="Imagen de la asignatura" />
+    </div>
+    <br>
+    <p>📆Fecha: {{ fecha }}</p>
+    <p>⏰Hora: {{ hora }}</p>
+
+    <br>
+    <ion-button expand="block" (click)="simularEscanearQR()">Escanear Código QR</ion-button>
+     <!-- Mostrar la imagen del código QR generado -->
+    <div *ngIf="codigoQRVisible" class="qr-popup">
+      <h3>Captura</h3>
+      <img src="assets/img/capturar.png" alt="Código QR generado" />
+      <ion-button (click)="cerrarQRCode()">Cerrar</ion-button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <div class="buttons-row">
+    <div class="button-container">
+      <ion-button expand="block" (click)="volver()">Volver</ion-button>
+    </div>
+    <div class="button-container-2">
+      <ion-button expand="block" (click)="logout()">Cerrar sesión</ion-button>
+
+    </div>
+  </div>
+
+</ion-content>
+<app-footer>
+
+</app-footer>

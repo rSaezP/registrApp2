@@ -1,0 +1,105 @@
+/* Estilos generales */
+ion-content {
+  --background: white ;
+}
+
+
+/* header */
+
+ion-header {
+  ion-toolbar {
+    background-color: #042d54;
+    display: flex; /* Agregar esta línea para usar flexbox */
+    justify-content: flex-start; /* Alinear elementos al inicio */
+    align-items: center; /* Centrar verticalmente */
+
+    ion-title {
+      color: rgb(240, 200, 21);
+      font-size: 13px;
+      text-align: left; /* Asegurarse de que el texto esté a la izquierda */
+      text-transform: uppercase;
+      margin-left: 16px; /* Opcional: agregar un margen izquierdo */
+    }
+  }
+}
+
+/* Estilos para la información del alumno */
+.alumno-info {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 12px #042d54;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+
+  margin-bottom: 10px;
+}
+
+.alumno-info h2,
+.alumno-info p {
+  color: #042d54c9;
+  margin: 5px 0;
+}
+
+/* Estilos para la lista de asignaturas */
+ion-list {
+  background-color: transparent;
+  padding: 10px;
+  max-width: 350px;
+  margin: 10px auto;
+}
+
+ion-item {
+
+  --background: #042d54c9 ;
+  --color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 5px;
+  background-color: #042d54 ;
+  box-shadow: 0 2px 8px #042d54;
+
+}
+.button-container {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */         /* Altura del contenedor al 100% de la vista */
+}
+/* Estilos para los botones */
+ion-button {
+  --background: rgb(240, 200, 21);
+  --color: #042d54c9;
+  --border-radius: 5px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgb(240, 200, 21);
+  text-transform: uppercase;
+}
+
+/* Estilos para el encabezado y pie de página */
+ion-toolbar {
+  --background: #042d54c9;
+  --color: #fffcd2;
+}
+
+ion-title {
+  color: rgb(240, 200, 21);
+}
+
+/* Ajustes adicionales */
+ion-footer ion-toolbar {
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}

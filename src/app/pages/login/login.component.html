@@ -1,24 +1,48 @@
-<ion-content>
+<ion-content class="ion-padding" fullscreen>
+  <app-header></app-header>
+  <div class="container">
+    <div id="form">
+      <form>
+        <br>
 
+        <!-- Logo centrado (ajusta la ruta de la imagen si es necesario) -->
+        <div class="logo-container">
+          <img src="assets/img/logo.png" class="logo">
+        </div>
+        <br>
 
-  <!-- @if (isLoading) {
-    <ion-spinner name="bubbles"></ion-spinner>
-  } -->
-  <!-- Contenido del Login -->
-  <p>login works!</p>
-  <ion-item>
-    <ion-label position="floating">Usuario</ion-label>
-    <ion-input [(ngModel)]="usuario"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Clave</ion-label>
-    <ion-input [(ngModel)]="clave"></ion-input>
-  </ion-item>
-  <ion-button (click)="login(usuario, clave)">Iniciar sesión</ion-button>
-  <!-- Mostrar mensaje de error si el login falla -->
-  <ion-text color="danger" *ngIf="loginFailed">
-    Usuario o clave incorrectos.
-  </ion-text>
+        <!-- Campo de Usuario -->
+        <p style="color: rgb(240, 200, 21);">Usuario</p>
+        <ion-item lines="none" class="input-wrapper">
+          <ion-input type="text" placeholder="Ingrese su usuario" [(ngModel)]="usuario" name="username"
+            required></ion-input>
+        </ion-item>
+        <br>
 
+        <!-- Campo de Contraseña -->
+        <p style="color: rgb(240, 200, 21);">Contraseña</p>
+        <ion-item lines="none" class="input-wrapper">
+          <ion-input type="password" placeholder="Ingrese su contraseña" [(ngModel)]="clave" name="password"
+            required></ion-input>
+        </ion-item>
+        <br>
 
+        <!-- Enlace de 'Olvidó su Contraseña' -->
+        <div class="forgot-password">
+          <a [routerLink]="['/recuperar-contraseña']">Olvidó su Contraseña?</a>
+        </div>
+        <br>
+
+        <!-- Botón de Iniciar Sesión -->
+        <div class="button-container">
+          <ion-button expand="block" class="btn-info" (click)="login(usuario, clave)">Iniciar sesión</ion-button>
+        </div>
+        <!-- Mostrar mensaje de error si el login falla -->
+        <br>
+        <ion-text *ngIf="loginFailed">
+          Usuario o clave incorrectos.
+        </ion-text>
+      </form>
+    </div>
+  </div>
 </ion-content>

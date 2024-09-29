@@ -1,4 +1,36 @@
-<p>
-  alumno works!
-</p>
-1
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bienvenido {{ nombreAlumno }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="alumno-info">
+    <img src="assets/img/alumnos.png" alt="Imagen de perfil" class="avatar">
+    <h2>{{ nombreAlumno }}</h2>
+    <p>Rol: {{ rol }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Teléfono: {{ telefono }}</p>
+  </div>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let asignatura of ['Arquitectura de SW', 'Estadística Descriptiva', 'Calidad de Software', 'Inglés Elemental']"
+      (click)="irADetalle(asignatura)">
+      <ion-label>{{ asignatura }}</ion-label>
+    </ion-item>
+
+  </ion-list>
+  <div class="button-container">
+    <ion-button (click)="logout()">Cerrar sesión</ion-button>
+  </div>
+
+  <ion-footer></ion-footer>
+</ion-content>
+
+
+<app-footer>
+
+</app-footer>

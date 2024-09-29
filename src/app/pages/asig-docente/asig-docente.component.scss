@@ -1,0 +1,92 @@
+ion-content {
+    --background: #ffffff;
+  }
+
+  .toolbar-container {
+    background-color: #042d54;
+      ion-toolbar{
+        --background: transparent;
+
+        ion-title{
+          color: rgb(240, 200, 21);
+          font-size: 13px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }}
+
+      .detalle-asignatura {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 2px 12px #042d54;
+        border: 3px  #042d54;
+        --background: #042d54c9 ;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 25px;
+      padding: 5px;
+      }
+
+
+  .detalle-asignatura h2,
+  .detalle-asignatura p {
+    color: #042d54;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  ion-button {
+    --background: rgb(240, 200, 21);
+    --color: #042d54c9;
+    --border-radius: 5px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgb(240, 200, 21);
+    text-transform: uppercase;
+  }
+  .buttons-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .button-container,
+.button-container-2 {
+  flex: 1;
+  margin: 5px;
+}
+.imagen-asignatura {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  margin-top: 20px;        /* Añade algo de espacio sobre la imagen */
+}
+
+.imagen-asignatura img {
+  max-width: 100%;         /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: 200px;
+  width: 200px;            /* Mantiene la proporción de la imagen */
+  border-radius: 8px;      /* Añade bordes redondeados si lo deseas */
+}
+.qr-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000; // Asegúrate de que esté por encima de otros elementos
+}
+

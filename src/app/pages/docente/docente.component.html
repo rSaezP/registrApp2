@@ -1,3 +1,32 @@
-<p>
-  docente works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bienvenido {{ nombreDocente }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="alumno-info">
+    <img src="assets/img/instructor.png" alt="Imagen de perfil" class="avatar">
+    <h2>{{ nombreDocente }}</h2>
+    <p>Rol: {{ rol }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Teléfono: {{ telefono }}</p>
+  </div>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let asignatura of ['Programación Web', 'Aplicaciones Móviles', 'Calidad de Software', 'Arquitectura de SW']"
+      (click)="irADetalle(asignatura)">
+      <ion-label>{{ asignatura }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <div class="button-container">
+    <ion-button (click)="logout()">Cerrar sesión</ion-button>
+  </div>
+</ion-content>
+
+<app-footer>
+
+</app-footer>

@@ -9,6 +9,7 @@ import { AlumnoComponent } from './alumno/alumno.component';
 import { AsigDocenteComponent } from './asig-docente/asig-docente.component';
 import { AsigAlumnoComponent } from './asig-alumno/asig-alumno.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,14 @@ import { PagesRoutingModule } from './pages-routing.module';
     DocenteComponent,
     AlumnoComponent,
     AsigDocenteComponent,
-    AsigAlumnoComponent
+    AsigAlumnoComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    SharedModule, // Importar el módulo SharedModule para reutilizar componentes comunes en todos los módulos
   ]
 })
 export class PagesModule { }

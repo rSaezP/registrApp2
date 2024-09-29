@@ -1,0 +1,19 @@
+img {
+    width: 150px; /* Ajusta el ancho según lo que necesites */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.logout-btn {
+    background-color: #4d8dff; /* Color de fondo */
+    color: rgb(240, 200, 21);              /* Color del texto */
+    border: none;              /* Sin borde */
+    padding: 10px 20px;        /* Espaciado interno */
+    border-radius: 5px;        /* Bordes redondeados */
+    cursor: pointer;           /* Cambia el cursor al pasar sobre el botón */
+    font-size: 14px;           /* Tamaño del texto */
+    transition: background-color 0.3s ease; /* Animación suave al pasar el ratón */
+
+}
+.logout-btn:hover {
+    background-color: #1429a0; /* Color de fondo al hacer hover */
+}

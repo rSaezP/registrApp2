@@ -1,3 +1,56 @@
-<p>
-  recuperar works!
-</p>
+<ion-content class="ion-padding" fullscreen>
+  <app-header></app-header>
+  <div class="container">
+    <div id="form">
+      <form (ngSubmit)="enviarSolicitud()">
+        <br>
+
+        <!-- Logo centrado (ajusta la ruta de la imagen si es necesario) -->
+        <div class="logo-container">
+          <img src="assets/img/logo.png" class="logo">
+        </div>
+        <br>
+
+        <!-- Campo de Email -->
+        <div class="email-container">
+          <p style="color: rgb(240, 200, 21);">Email</p>
+          <ion-item lines="none" class="input-wrapper">
+            <ion-input
+              type="email"
+              placeholder="Ingrese su email"
+              [(ngModel)]="email"
+              name="email"
+              required>
+            </ion-input>
+          </ion-item>
+        </div>
+        <br>
+
+        <!-- Mensaje de error si el email no es válido -->
+        <div *ngIf="errorMessage" style="color: rgb(240, 200, 21) ; margin-top: 10px;">
+          {{ errorMessage }}
+        </div>
+
+        <!-- Mostrar mensaje de éxito cuando la solicitud se envíe correctamente -->
+        <div *ngIf="successMessage" style="color:  rgb(240, 200, 21); margin-top: 10px;">
+          {{ successMessage }}
+        </div>
+
+        <br>
+
+        <!-- Botón de Enviar Solicitud -->
+        <div class="buttons-row">
+          <div class="button-container">
+            <ion-button expand="block" class="btn-info" (click)="volver()"> ⬅ Volver</ion-button>
+          </div>
+          <div class="button-container-2">
+            <ion-button expand="block" class="btn-info" type="submit">
+              Enviar ➡
+            </ion-button>
+          </div>
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+</ion-content>

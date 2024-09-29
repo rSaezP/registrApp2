@@ -1,0 +1,104 @@
+/* Fondo azul */
+ion-content {
+    --background: #ffffff;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #042d54;
+    border-radius: 10px;
+  }
+
+  #form {
+    background-color: #042d54c9;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+
+  }
+
+  p {
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    padding-left: 8px;
+  }
+
+  /* Inputs personalizados */
+  .input-wrapper {
+    margin-bottom: 16px;
+  }
+
+  ion-item {
+    --inner-padding-start: 0px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --highlight-color-focused: transparent;
+    --background: transparent;
+  }
+
+  ion-input {
+    --padding-start: 15px;
+    --background: white;
+    --color: #042d54;
+    --placeholder-color: #000000;
+    --placeholder-font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 45px;
+    font-weight:bold;
+    font-size: 16px;
+    --border-radius:5px;
+
+  }
+
+  /* Botón de iniciar sesión */
+  .btn-info {
+    --background: rgb(240, 200, 21);
+  --color: #042d54c9;
+  --border-radius: 5px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(240, 200, 21);
+  text-transform: uppercase;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */         /* Altura del contenedor al 100% de la vista */
+  }
+
+  .forgot-password {
+    text-align: right;
+    margin-top: -10px;
+  }
+
+  /* Estilo del logo */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    height: auto;
+    width: auto;
+    margin-bottom: -100px;
+    margin-top: -100px;
+  }
+  ion-text{
+    font-weight: bold;
+    font-size: 20px;
+    color:rgb(240, 200, 21);
+    padding-left: 20px;
+  }

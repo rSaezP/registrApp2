@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'alumno', component: AlumnoComponent },
   { path: 'detalle-asignatura-docente', component: AsigDocenteComponent },
   { path: 'detalle-asignatura-alumno', component: AsigAlumnoComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({
