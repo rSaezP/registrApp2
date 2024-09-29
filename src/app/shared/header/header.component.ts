@@ -21,17 +21,4 @@ export class HeaderComponent {
       this.rol = usuario?.rol || null;
     });
   }
-  navigateToInicio() {
-    if (this.rol === 'docente') {
-      this.router.navigate(['/docente']); // Cambia esto por la ruta de inicio para docentes
-    } else if (this.rol === 'alumno') {
-      this.router.navigate(['/alumno']); // Cambia esto por la ruta de inicio para alumnos
-    }
-  }
-
-
-  logout() {
-    this.authService.logout();
-    this.router.navigate(['/login']); // Redirigir a la página de login
-  }
 }

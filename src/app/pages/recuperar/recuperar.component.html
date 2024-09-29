@@ -15,25 +15,20 @@
         <div class="email-container">
           <p style="color: rgb(240, 200, 21);">Email</p>
           <ion-item lines="none" class="input-wrapper">
-            <ion-input
-              type="email"
-              placeholder="Ingrese su email"
-              [(ngModel)]="email"
-              name="email"
-              required>
+            <ion-input type="email" placeholder="Ingrese su email" [(ngModel)]="email" name="email" required>
             </ion-input>
           </ion-item>
         </div>
         <br>
 
         <!-- Mensaje de error si el email no es válido -->
-        <div *ngIf="errorMessage" style="color: rgb(240, 200, 21) ; margin-top: 10px;">
-          {{ errorMessage }}
+        <div *ngIf="errorMessage" style="color: rgb(240, 200, 21) ; margin-top: 10px;font-size: 20px;">
+          <strong>{{ errorMessage }}</strong>
         </div>
 
         <!-- Mostrar mensaje de éxito cuando la solicitud se envíe correctamente -->
-        <div *ngIf="successMessage" style="color:  rgb(240, 200, 21); margin-top: 10px;">
-          {{ successMessage }}
+        <div *ngIf="successMessage" style="color:  rgb(240, 200, 21); margin-top: 10px; font-size: 20px;">
+          <strong>{{ successMessage }} </strong>
         </div>
 
         <br>

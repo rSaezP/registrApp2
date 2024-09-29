@@ -26,9 +26,9 @@ export class RecuperarComponent implements OnInit {
       // Redirige a login después de un tiempo (opcional)
       setTimeout(() => {
         this.router.navigate(['/login']);
-      }, 3000); // Redirige después de 3 segundos
+      }, 2000); // Redirige después de 3 segundos
     } else {
-      this.errorMessage = 'Por favor, ingresa un email válido.'; // Mensaje de error en pantalla
+      this.errorMessage = 'Ingrese un email válido.'; // Mensaje de error en pantalla
     }
   }
 

@@ -32,16 +32,14 @@
           <a [routerLink]="['/recuperar-contraseña']">Olvidó su Contraseña?</a>
         </div>
         <br>
+        <ion-text *ngIf="loginFailed">
+          Usuario o clave incorrectos.
+        </ion-text><br><br>
 
         <!-- Botón de Iniciar Sesión -->
         <div class="button-container">
           <ion-button expand="block" class="btn-info" (click)="login(usuario, clave)">Iniciar sesión</ion-button>
         </div>
-        <!-- Mostrar mensaje de error si el login falla -->
-        <br>
-        <ion-text *ngIf="loginFailed">
-          Usuario o clave incorrectos.
-        </ion-text>
       </form>
     </div>
   </div>

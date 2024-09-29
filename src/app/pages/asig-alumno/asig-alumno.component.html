@@ -21,9 +21,9 @@
 
     <br>
     <ion-button expand="block" (click)="simularEscanearQR()">Escanear Código QR</ion-button>
-     <!-- Mostrar la imagen del código QR generado -->
+    <!-- Mostrar la imagen del código QR generado -->
     <div *ngIf="codigoQRVisible" class="qr-popup">
-      <h3>Captura</h3>
+      <h3>Escanear QR</h3>
       <img src="assets/img/capturar.png" alt="Código QR generado" />
       <ion-button (click)="cerrarQRCode()">Cerrar</ion-button>
     </div>
