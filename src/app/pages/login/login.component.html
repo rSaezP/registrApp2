@@ -1,0 +1,45 @@
+<ion-content class="ion-padding">
+  <div class="container">
+    <div id="form">
+      <div class="logo-container">
+        <img src="assets/img/logo.png" class="logo" alt="Logo">
+      </div>
+
+      <div class="input-wrapper">
+        <p style="color: rgb(240, 200, 21);">Usuario</p>
+        <ion-item>
+          <ion-input [(ngModel)]="usuario" name="usuario" required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-wrapper">
+        <p style="color: rgb(240, 200, 21);">Contraseña</p>
+        <ion-item>
+          <ion-input [(ngModel)]="clave" name="clave" type="password" required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="forgot-password">
+        <ion-button fill="clear" (click)="mostrarAlertaOlvidoContrasena()">
+          ¿Olvidó su Contraseña?
+        </ion-button>
+      </div>
+
+      <div *ngIf="loginFailed" class="error-message">
+        <ion-text color="danger"></ion-text>
+      </div>
+
+      <div class="button-container">
+        <ion-button expand="block" (click)="login(usuario, clave)" [disabled]="isLoading" class="btn-info">
+          {{ isLoading ? 'Iniciando sesión...' : 'Iniciar sesión' }}
+        </ion-button>
+      </div>
+
+      <div class="button-container">
+        <ion-button expand="block" (click)="irARegistro()" class="btn-info">
+          Registrar
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
